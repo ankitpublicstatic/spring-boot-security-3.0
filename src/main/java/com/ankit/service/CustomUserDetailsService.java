@@ -11,7 +11,7 @@ import com.ankit.entity.UserInfo;
 import com.ankit.repository.UserInfoRepository;
 
 @Component
-public class UserInfoUserDetailsService implements UserDetailsService {
+public class CustomUserDetailsService implements UserDetailsService {
 
   @Autowired
   private UserInfoRepository repository;

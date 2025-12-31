@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import com.ankit.service.UserInfoUserDetailsService;
+import com.ankit.service.CustomUserDetailsService;
 
 @Configuration
 @EnableWebSecurity
@@ -27,7 +27,7 @@ public class SecurityConfig {
     // UserDetails user = User.withUsername("John").password(encoder.encode("Pwd2"))
     // .roles("USER", "ADMIN", "HR").build();
     // return new InMemoryUserDetailsManager(admin, user);
-    return new UserInfoUserDetailsService();
+    return new CustomUserDetailsService();
   }
 
   @Bean
